@@ -12,8 +12,8 @@ export const FeedbackOptions = () => {
   const [bad, setBad] = useState(0);
   const totalVotes = good + neutral + bad;
   const positivePercentage = Math.round((good / totalVotes) * 100);
-
-  return (
+    
+    return (
     <div className="vote-container">
       <h3 className="vote-container__title">Please leave feedback</h3>
       <button
@@ -41,12 +41,14 @@ export const FeedbackOptions = () => {
         Bad
       </button>
 
-      <h3 className="vote-container__statistics">Statistics</h3>
-      <p>Good: {good}</p>
-      <p>Neutral: {neutral}</p>
-      <p>Bad: {bad}</p>
-      <p>Total: {totalVotes}</p>
-      <p>Positive feedback: {positivePercentage}%</p>
-    </div>
-  );
+      <h3 className="statistics">Statistics</h3>
+      <p className="statistics-values">Good: {good}</p>
+      <p className="statistics-values">Neutral: {neutral}</p>
+      <p className="statistics-values">Bad: {bad}</p>
+      <p className="statistics-values">Total: {totalVotes}</p>
+      <p className="statistics-values">Positive feedback: {positivePercentage}%</p>
+      </div>
+    );
 };
+
+
