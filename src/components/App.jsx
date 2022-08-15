@@ -1,3 +1,8 @@
+import { FeedbackOptions } from "./FeedbackOptions/FeedbackOptions";
+// import { Counter } from "./FeedbackOptions/FeedbackOptions";
+
+
+
 export const App = () => {
   return (
     <div
@@ -10,7 +15,7 @@ export const App = () => {
         color: '#010101'
       }}
     >
-      React homework template
+      <FeedbackOptions />
     </div>
   );
 };
