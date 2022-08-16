@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 // import styles from './FeedbackOptions.module.scss';
 
-export const FeedbackOptions = () => {
+export const FeedbackOptionsV1 = () => {
   const [good, setGood] = useState(0);
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
@@ -54,7 +54,7 @@ export const FeedbackOptions = () => {
           </ul>
         </>
       ) : (
-        <h3>No voltes</h3>
+        <h3>There is no feedback</h3>
       )}
     </div>
   );
