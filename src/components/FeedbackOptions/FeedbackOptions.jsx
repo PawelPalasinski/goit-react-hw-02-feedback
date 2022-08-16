@@ -1,19 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import { Component } from 'react';
 
 // import styles from './FeedbackOptions.module.scss';
 
 export const FeedbackOptions = () => {
-
   const [good, setGood] = useState(0);
   const [neutral, setNeutral] = useState(0);
   const [bad, setBad] = useState(0);
-  const totalVotes = good + neutral + bad;
-  const positivePercentage = Math.round((good / totalVotes) * 100);
-    
-    return (
+
+  const countVotes = () => good + neutral + bad;
+  const positivePercentage = Math.round((good / countVotes()) * 100);
+
+  return (
     <div className="vote-container">
       <h3 className="vote-container__title">Please leave feedback</h3>
       <button
@@ -41,14 +40,22 @@ export const FeedbackOptions = () => {
         Bad
       </button>
 
-      <h3 className="statistics">Statistics</h3>
-      <p className="statistics-values">Good: {good}</p>
-      <p className="statistics-values">Neutral: {neutral}</p>
-      <p className="statistics-values">Bad: {bad}</p>
-      <p className="statistics-values">Total: {totalVotes}</p>
-      <p className="statistics-values">Positive feedback: {positivePercentage}%</p>
-      </div>
-    );
+      {countVotes() !== 0 ? (
+        <>
+          <h3>Statistics</h3>
+          <ul className="statistics">
+            <li className="statistics-values">Good: {good}</li>
+            <li className="statistics-values">Neutral: {neutral}</li>
+            <li className="statistics-values">Bad: {bad}</li>
+            <li className="statistics-values">Total: {countVotes()}</li>
+            <li className="statistics-values">
+              Positive feedback: {positivePercentage}%
+            </li>
+          </ul>
+        </>
+      ) : (
+        <h3>No voltes</h3>
+      )}
+    </div>
+  );
 };
-
-
