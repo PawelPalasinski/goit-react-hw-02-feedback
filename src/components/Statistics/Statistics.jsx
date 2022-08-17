@@ -4,8 +4,8 @@ import Notification from '../Notification/Notification';
 // import styles from './Statistics.module.css';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
-  <div>
-          <ul className="statistics">
+  <div className="section-feedback__statistics">
+          <ul className="statistics-list">
             <li>Good: {good}</li>
             <li>Neutral: {neutral}</li>
             <li>Bad: {bad}</li>

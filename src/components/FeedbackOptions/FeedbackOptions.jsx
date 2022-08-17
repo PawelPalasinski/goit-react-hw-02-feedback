@@ -8,7 +8,7 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 
   return arr.map(a => {
     return (
-        <button key={a} type="button" name={a} onClick={onLeaveFeedback}>
+        <button key={a} type="button" className="section-feedback__option-btn" name={a} onClick={onLeaveFeedback}>
           {a}
         </button>
     );
