@@ -32,7 +32,9 @@ export class App extends Component {
 
   handleClick = e => {
     const { name } = e.target;
+    console.log(name);
     this.setState(state => ({ [name]: state[name] + 1 }));
+    console.log(this.state[name]);
     this.countTotalFeedback();
     this.countPositiveFeedbackPercentage();
   };

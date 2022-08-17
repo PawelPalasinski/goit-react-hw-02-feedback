@@ -15,4 +15,10 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   });
 };
 
+FeedbackOptions.propTypes = {
+  options: PropTypes.object.isRequired,
+  onLeaveFeedback: PropTypes.func.isRequired,
+}
+
 export default FeedbackOptions;
+
