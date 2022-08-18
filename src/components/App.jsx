@@ -1,29 +1,19 @@
-// import { FeedbackOptionsV1 } from './FeedbackOptionsV1/FeedbackOptionsV1';
-
-// export const App = () => {
-//   return (
-//     <div>
-//       <FeedbackOptionsV1 />
-//     </div>
-//   );
-// };
-
-
 import React, { Component } from 'react';
 
 import Section from './Section/Section';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Statistics from './Statistics/Statistics';
 import Notification from './Notification/Notification';
+import MyContainer from './MyContainer/MyContainer';
 
 export class App extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
       good: 0,
       neutral: 0,
       bad: 0,
-    }
+    };
   }
 
   countTotalFeedback = () => {
@@ -40,17 +30,17 @@ export class App extends Component {
   };
 
   countPositiveFeedbackPercentage = () => {
-    return (Math.round((this.state.good / this.countTotalFeedback()) * 100));
+    return Math.round((this.state.good / this.countTotalFeedback()) * 100);
   };
 
   render() {
     const { good, neutral, bad } = this.state;
     const total = this.countTotalFeedback();
-    const positiveFeedbackPercentage =
-      this.countPositiveFeedbackPercentage();
-    
+    const positiveFeedbackPercentage = this.countPositiveFeedbackPercentage();
+
     return (
       <div>
+      <MyContainer>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={this.state}
@@ -63,11 +53,13 @@ export class App extends Component {
               bad={bad}
               total={total}
               positivePercentage={positiveFeedbackPercentage}
-            />) : (
-              <Notification message="There is no feedback"/>
+            />
+          ) : (
+            <Notification message="There is no feedback" />
           )}
         </Section>
-      </div>
+        </MyContainer>
+        </div>
     );
   }
 }

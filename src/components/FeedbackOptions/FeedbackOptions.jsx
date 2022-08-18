@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import styles from './FeedbackOptions/FeedbackOptions.module.css';
+import styles from './FeedbackOptions.module.css';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   const arr = Object.keys(options);
@@ -8,7 +8,7 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 
   return arr.map(a => {
     return (
-        <button key={a} type="button" className="section-feedback__option-btn" name={a} onClick={onLeaveFeedback}>
+      <button key={a} type="button" className={styles.optionBtn} name={a} onClick={onLeaveFeedback}>
           {a}
         </button>
     );

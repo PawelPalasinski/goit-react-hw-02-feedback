@@ -1,1 +1,8 @@
-/* No CSS *//*# sourceMappingURL=FeedbackOptions.module.css.map */
+.optionBtn {
+  border: solid 1px grey;
+  border-radius: 5px;
+  width: 80px;
+  height: 25px;
+  margin: 10px;
+}
+/*# sourceMappingURL=FeedbackOptions.module.css.map */
