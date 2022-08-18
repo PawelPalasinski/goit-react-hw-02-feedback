@@ -4,7 +4,6 @@ import styles from './FeedbackOptions.module.css';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   const arr = Object.keys(options);
-  console.log(arr);
 
   return arr.map(a => {
     return (
