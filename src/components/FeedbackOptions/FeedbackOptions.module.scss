@@ -1,7 +1,12 @@
 .optionBtn {
-    border: solid 1px grey;
+    border: none;
     border-radius: 5px;
-    width: 80px;
-    height: 25px;
+    max-width: 80px;
+    height: 80px;
     margin: 10px;
+    font-size: 70px;
+    text-align: center;
+    background-color: transparent;
+    line-height: 0;
+    padding: 0;
 }

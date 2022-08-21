@@ -4,11 +4,11 @@ import styles from './FeedbackOptions.module.css';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   const arr = Object.keys(options);
-
+  console.log(arr);
   return arr.map(a => {
     return (
       <button key={a} type="button" className={styles.optionBtn} name={a} onClick={onLeaveFeedback}>
-          {a}
+          {a === 'good' ? '😊' : a === 'neutral' ? '😑' : '😞' }
         </button>
     );
   });

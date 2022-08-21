@@ -3,11 +3,16 @@
   display: -ms-flexbox;
   display: flex;
   color: #191919;
-  width: 400px;
+  max-width: 400px;
   margin: 0 auto;
   margin-top: 50px;
   border: 1px solid grey;
   border-radius: 10px;
   text-align: center;
+}
+
+.feedbackContainer:hover {
+  -webkit-box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.7);
+          box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.7);
 }
 /*# sourceMappingURL=MyContainer.module.css.map */
